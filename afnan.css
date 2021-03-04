@@ -1,0 +1,338 @@
+ *{
+     box-sizing: border-box;
+   
+ }
+ body{
+     margin: 0;
+ }
+
+.dotted-hr{
+  border: dotted 6px white;
+  border-bottom: none;
+  width: 190px;
+}
+.dottedBlack-hr{
+  border: dotted 6px black;
+  border-bottom: none;
+  width: 190px;
+}
+ .nav-logo img{
+     width: 150px;
+     height: 140px;
+    
+     border-radius: 200px;
+    box-shadow: 1px 2px 5px wheat;
+ }
+ .nav-heading h1{
+     color: white;
+ }
+ a{
+     color: white;
+     font-size: 1.2rem;
+     text-decoration: none;
+     margin: 10px;
+ }
+ [class*="col-"]{
+     float: left;
+     padding: 10px;
+ }
+ [class*="col-"]{
+    width: 100%;
+ }
+ .nav{
+     background-color: rgb(8, 8, 8);
+     padding: 1% 7%;
+     
+     text-align: center;
+     border-bottom: .1px solid wheat;
+ }
+  .nav h1{
+      text-shadow: 1px 2px 5px white;
+  }
+
+  .nav-menu{
+      display: flex;
+      flex-direction: column;
+  }
+  .nav-menu a{
+      background-color: rgb(20, 20, 20);
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 1px 2px 5px wheat;
+     
+  }
+  .nav-menu a:hover{
+       background-color: rgb(20, 20, 20);
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 3px 5px 10px wheat;
+      
+  }
+ .nav::after{
+     content: '';
+     display: table;
+     clear: both;
+ }
+
+ /* profile design */
+ .profile{
+     background-color: rgb(8,8,8);
+     color: white;
+    
+     padding: 1% 7%;
+     text-align: center;
+ }
+ .profile img{
+     max-width: 100%;
+     max-height: 100%;
+     border-radius: 100px;
+     opacity: 25%;
+ }
+ 
+ 
+
+ /* about me */
+ .aboutME{
+     background-color: rgb(8, 8, 8);
+     /* height: 700px; */
+     padding: 1% 7%;
+     text-align: center;
+ }
+ h2{
+     color: white;
+ }
+ p{
+     color: white;
+ }
+ .aboutME img{
+     width: 200px;
+     height: 190px;
+     border-radius: 90px;
+ }
+ .aboutME::after{
+     content: '';
+     display: table;
+     clear: both;
+ }
+
+/* card */
+.card-main-div{
+    background-color: rgb(8, 8, 8);
+    padding: 1% 7%;
+}
+/* .card > div{
+    background-color: rgb(37, 35, 35);
+    height: 700px;
+    text-align: center;
+    padding: 10px;
+   
+     border-radius: 15px;
+    box-shadow: 2px 4px 6px white; 
+    transition: .9s;
+} */
+ .c-card{
+            background-color: rgb(37, 35, 35);
+            height: 700px;
+            padding: 1% 7%;
+            text-align: center;
+
+              border-radius: 15px;
+            box-shadow: 2px 4px 6px white; 
+            transition: .9s;
+        }
+.card-container img{
+
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border: 5px solid white;
+    border-radius: 40px;
+    box-shadow: 2px 4px 6px wheat;
+    
+}
+.card P{
+    background-color: black;
+    padding: 20px;
+   /* max-width: 400px; */
+    align-content: center;
+    font-size: 1.5rem;
+    border-radius: 100px;
+}
+.skill-card:hover{
+    box-shadow: 0px 4px 8px 5px black;
+}
+.work-card:hover{
+    box-shadow: 0px 4px 8px 5px black;
+}
+.education-card:hover{
+    box-shadow: 0px 4px 8px 5px black;
+}
+.education-card li{
+    list-style: none;
+}
+.skill{
+    text-align: left;
+}
+.card .skill-card li{
+    list-style: none;
+    font-weight: bolder;
+    margin: 60px 0;
+    position: relative;
+    color: wheat;
+}
+.card .skill-card li::before{
+    content: '';
+    position:absolute;
+    background-color: black;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    height: 20px;
+    
+    border-radius: 20px;
+    box-shadow:2px 4px 6px wheat;
+}
+.card .skill-card li::after{
+    content: '';
+    position:absolute;
+    background-color: rgb(67, 66, 66);
+    width: 0;
+    height: 20px;
+    top: calc(100% + 5px);
+    left: 0;
+    border-radius: 20px;
+
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+.skill-card .html::after{
+    animation-name: html-ani;
+}
+.skill-card .css::after{
+    animation-name: css-ani;
+}
+.skill-card .js::after{
+    animation-name: js-ani;
+}
+.skill-card .java::after{
+    animation-name: java-ani;
+}
+.skill-card .c::after{
+    animation-name: c-ani;
+}
+ @keyframes html-ani {
+            to{
+                width: 80%;
+            }
+        }
+         @keyframes css-ani {
+            to{
+                width: 70%;
+            }
+        }
+         @keyframes js-ani {
+            to{
+                width: 75%;
+            }
+        }
+         @keyframes java-ani {
+            to{
+                width: 70%;
+            }
+        }
+         @keyframes c-ani {
+            to{
+                width: 80%;
+            }
+        }
+        .card-container::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+/* achievement */
+        .achivement-contact{
+            background-color: rgb(8, 8, 8);
+            padding: 1% 7%;
+        }
+        .achivement{
+            text-align: center;
+            
+        }
+           /* contact me */
+        .contact{
+            /* padding: 1% 7%; */
+            text-align: center;
+        }
+
+        .contact input, textarea{
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            resize: none;
+            margin: 30px 0px;
+        }
+       .contact button{
+           background-color: black;
+           color: wheat;
+           padding: 5px;
+           margin: 10px;
+           border-radius: 10px;
+       }
+
+        .contact-link{
+            text-align: center;
+        }
+        .media-btn .btn{
+            border: none;
+            border-radius: 5px;
+            font-size: 2rem;
+            margin: 5px;
+            background-color: black;
+
+        }
+        .btn:hover{
+            box-shadow: 1px 1px 1px 1px wheat;
+        }
+        /* clerar flot */
+         .achivement-contact::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+
+        /* footer */
+
+
+        .footer{
+            background-color: rgb(8, 8, 8);
+            padding: 20px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+     .footer-menu a{
+         display: block;
+         margin: 25px 0px;
+     }
+     .footer-menu a:hover{
+         color: gray;
+     }
+     .footer-dec{
+         color: wheat;
+     }
+.footer::after{
+    content: '';
+            display: table;
+            clear: both;
+}
+  
+
+     
